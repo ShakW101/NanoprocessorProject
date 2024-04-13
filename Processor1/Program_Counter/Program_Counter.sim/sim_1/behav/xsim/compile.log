@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.srcs/sources_1/new/CLOCK.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CLOCK
+INFO: [VRFC 10-163] Analyzing VHDL file "L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.srcs/sources_1/new/Program_Counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Counter
+INFO: [VRFC 10-163] Analyzing VHDL file "L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.srcs/sources_1/new/Program_Counter_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Counter_TB

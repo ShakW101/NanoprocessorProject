@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sun Apr 14 01:51:21 2024
+# Process ID: 33432
+# Current directory: L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.runs/synth_1
+# Command line: vivado.exe -log Program_Counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Program_Counter.tcl
+# Log file: L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.runs/synth_1/Program_Counter.vds
+# Journal file: L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Program_Counter.tcl -notrace
+Command: synth_design -top Program_Counter -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 33456 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 381.754 ; gain = 97.469
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] clk_out is not declared [L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.srcs/sources_1/new/Program_Counter.vhd:38]
+ERROR: [Synth 8-1568] actual of formal out port clk_out cannot be an expression [L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.srcs/sources_1/new/Program_Counter.vhd:38]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [L:/Documents/Xilinx/Vivado/Program_Counter/Program_Counter.srcs/sources_1/new/Program_Counter.vhd:25]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 434.883 ; gain = 150.598
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 14 01:51:27 2024...
