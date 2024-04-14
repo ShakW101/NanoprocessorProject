@@ -96,13 +96,13 @@ port map(
     C_out => C3
     );
     
-Zero <= not(C3 or S0 or S1 or S2 or S3);
+Zero <= not(S0 or S1 or S2 or S3);
 Carry  <= C3;
 S_out(0) <= S0;
 S_out(1) <= S1;
 S_out(2) <= S2;
 S_out(3) <= S3;
 
-OverFlow <=  OpSel and not(C2 and (S_in1(3)  xor I3));
+OverFlow <=  C2 xor C3;
 
 end Behavioral;
