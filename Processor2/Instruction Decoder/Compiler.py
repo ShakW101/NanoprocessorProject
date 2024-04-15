@@ -190,7 +190,7 @@ def compileLine(line, no):
         case _:
             print(f"line {no}: ERROR: Keyword {function.upper()} isn't recognized.")
 
-
+#CHANGE FILE NAME TO YOUR CHOSEN ONE HERE
 fileToCompile = open('code.txt', 'r')
 lines = fileToCompile.readlines()
 x = 1
@@ -202,6 +202,7 @@ for line in lines:
 if None in machineCode:
     print("Compilation Failed")
 else:
+    #CHANGE FILE NAME TO YOUR CHOSEN ONE
     write_list_to_file("code.txt", machineCode, lines)
     print("Compilation Successful")
 
