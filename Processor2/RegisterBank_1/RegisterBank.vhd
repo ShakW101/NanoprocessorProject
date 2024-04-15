@@ -93,8 +93,8 @@ Register_4_bit_1 : Register_4_bit
 
 Register_4_bit_2 : Register_4_bit
     port map(
-        R_in => RB_in,
-        EN => tempEN(2),
+        R_in => "1111",
+        EN => '1',
         CLK => CLK_in,
         R_out => R2_out);
 
