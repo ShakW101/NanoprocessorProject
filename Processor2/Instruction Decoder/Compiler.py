@@ -65,13 +65,13 @@ def MoviFunc(rest, no):
 
 
 def JZRFunc(rest, no):
-    if re.fullmatch(r'[r][0-7],[1-8]', rest):
+    if re.fullmatch(r'[r][0-7],[1-9]|[r][0-7],1[0-6]', rest):
         splitS = rest.split(",")
         firstR = int(splitS[0][-1])
         secondR = int(splitS[1]) - 1
         bs1 = bin(firstR)[2:].zfill(3)
-        bs2 = bin(secondR)[2:].zfill(3)
-        return "0011" + bs1 + "0000" + bs2+""
+        bs2 = bin(secondR)[2:].zfill(4)
+        return "0011" + bs1 + "000" + bs2+""
     else:
         print(f"line {no}: ERROR")
 
@@ -194,7 +194,7 @@ def compileLine(line, no):
 
 fileToCompile = open('code.txt', 'r')
 lines = fileToCompile.readlines()
-if len(lines) > 8:
+if len(lines) > 16:
     print("ERROR: Too many lines of code")
 else:
     x = 0
@@ -208,12 +208,9 @@ else:
     if None in machineCode:
         print("Compilation Failed")
     else:
-        for n in range(8-x):
+        for n in range(16-x):
             machineCode.append("10010000000000")
             lines.append("Filled in with NOP")
         print(lines)
         write_list_to_file("code.txt", machineCode, lines)
         print("Compilation Successful")
-
-
-
