@@ -151,11 +151,12 @@ def write_list_to_file(filename, data_list, lines):
     # Open the file in write mode
     with open(filename, 'w') as file:
         n = len(data_list)
+
         # Iterate through the list and write each element to the file
         for x in range(n-1):
             # Convert the item to a string and write it to the file with a newline
-            file.write(f"\"{data_list[x]}\", --{lines[x].upper()}")
-        file.write(f"\"{data_list[n-1]}\" --{lines[n-1].upper()}")
+            file.write(f"\"{data_list[x]}\", --{lines[x].upper().strip()}\n")
+        file.write(f"\"{data_list[n-1]}\" --{lines[n-1].upper().strip()}")
         file.close()
 def compileLine(line, no):
     rest = ""
@@ -190,21 +191,29 @@ def compileLine(line, no):
         case _:
             print(f"line {no}: ERROR: Keyword {function.upper()} isn't recognized.")
 
-#CHANGE FILE NAME TO YOUR CHOSEN ONE HERE
+
 fileToCompile = open('code.txt', 'r')
 lines = fileToCompile.readlines()
-x = 1
-for line in lines:
-    line = line.strip()
-    line = line.lower()
-    machineCode.append(compileLine(line, x))
-    x += 1
-if None in machineCode:
-    print("Compilation Failed")
+if len(lines) > 8:
+    print("ERROR: Too many lines of code")
 else:
-    #CHANGE FILE NAME TO YOUR CHOSEN ONE
-    write_list_to_file("code.txt", machineCode, lines)
-    print("Compilation Successful")
+    x = 0
+    for line in lines:
+        x += 1
+        line = line.strip()
+        line = line.lower()
+        machineCode.append(compileLine(line, x))
+    print(x)
+
+    if None in machineCode:
+        print("Compilation Failed")
+    else:
+        for n in range(8-x):
+            machineCode.append("10010000000000")
+            lines.append("Filled in with NOP")
+        print(lines)
+        write_list_to_file("code.txt", machineCode, lines)
+        print("Compilation Successful")
 
 
 
