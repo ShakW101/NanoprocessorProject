@@ -24,7 +24,7 @@ entity Carry_Look_Ahead_Adder_Subtractor is
            Overflow : inout STD_LOGIC; --Overflow bit: Is there an overflow?
            --When the number is negative, is the number in range [-0,-8]: if yes, there is no overflow => Overflow =0; if no, there is an overflow => Overflow = 1
            --When the number is positive, is the number in range [+0, 7]: if yes, there is no overflow => Overflow =0; if no, there is an overflow => Overflow = 1
-           Zero : out STD_LOGIC); --Is the output zero(0000)?
+           Zero : out STD_LOGIC); --Is the output zero(0000) even when Enable is 1?
 end Carry_Look_Ahead_Adder_Subtractor;
 
 architecture Behavioral of Carry_Look_Ahead_Adder_Subtractor is
