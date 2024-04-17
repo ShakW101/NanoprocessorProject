@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Apr 17 18:28:18 2024
+# Process ID: 11748
+# Current directory: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14548 C:\Users\Shakthi Weerawansa\Desktop\Nanoprocessor2\Nanoprocessor2.xpr
+# Log file: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/vivado.log
+# Journal file: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source TB_Nanoprocessor2.tcl
+synth_design -rtl -name rtl_1
+write_schematic -format pdf -orientation landscape D:/circuit.pdf
+write_schematic -format pdf -orientation portrait D:/circuitCompact.pdf
+write_schematic -format pdf -orientation landscape -force D:/circuitcompact.pdf
+write_schematic -format pdf -orientation landscape D:/schematic.pdf
+refresh_design
+write_schematic -format pdf -orientation landscape -force D:/schematic.pdf
+refresh_design
+write_schematic -format pdf -orientation landscape -force D:/schematic.pdf
+write_schematic -format pdf -orientation landscape D:/schematicExt.pdf

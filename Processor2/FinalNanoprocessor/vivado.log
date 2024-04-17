@@ -1,0 +1,481 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Apr 17 18:28:18 2024
+# Process ID: 11748
+# Current directory: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14548 C:\Users\Shakthi Weerawansa\Desktop\Nanoprocessor2\Nanoprocessor2.xpr
+# Log file: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/vivado.log
+# Journal file: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_Nanoprocessor2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj TB_Nanoprocessor2_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8f40712ba48f487581fa5bec8819abfd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_Nanoprocessor2_behav xil_defaultlib.TB_Nanoprocessor2 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TB_Nanoprocessor2_behav -key {Behavioral:sim_1:Functional:TB_Nanoprocessor2} -tclbatch {TB_Nanoprocessor2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source TB_Nanoprocessor2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TB_Nanoprocessor2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 861.992 ; gain = 14.855
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: Nanoprocessor2
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 989.992 ; gain = 109.461
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Nanoprocessor2' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:49]
+INFO: [Synth 8-3491] module 'Bit14_Instruction_Decoder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:34' bound to instance 'Instruction_Decoder' of component 'Bit14_Instruction_Decoder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'Bit14_Instruction_Decoder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:50]
+INFO: [Synth 8-3491] module 'MUX_2_way_3_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:34' bound to instance 'Internal_Mux' of component 'MUX_2_way_3_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'MUX_2_way_3_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX_2_way_3_bit' (1#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Bit14_Instruction_Decoder' (2#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:50]
+INFO: [Synth 8-3491] module 'Carry_Look_Ahead_Adder_Subtractor' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:17' bound to instance 'LordsAdder' of component 'Carry_Look_Ahead_Adder_Subtractor' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'Carry_Look_Ahead_Adder_Subtractor' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:30]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_0' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:27]
+INFO: [Synth 8-3491] module 'Half_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:17' bound to instance 'Half_Adder_2' of component 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Half_Adder' (3#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:24]
+INFO: [Synth 8-3491] module 'Half_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:17' bound to instance 'Half_Adder_1' of component 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder' (4#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:27]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_1' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:67]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_2' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:75]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_3' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:83]
+INFO: [Synth 8-3491] module 'Carry_Look_Ahead' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:17' bound to instance 'Carry_Look_Ahead_0' of component 'Carry_Look_Ahead' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'Carry_Look_Ahead' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Carry_Look_Ahead' (5#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Carry_Look_Ahead_Adder_Subtractor' (6#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:30]
+INFO: [Synth 8-3491] module 'MUX_2_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:34' bound to instance 'Mux_Above_InstructionDecoder' of component 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX_2_way_4_bit' (7#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:41]
+INFO: [Synth 8-3491] module 'RegisterBank' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:34' bound to instance 'Register_Bank' of component 'RegisterBank' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'RegisterBank' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:48]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:34' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_0' of component 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2_to_4' (8#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_1' of component 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_to_8' (9#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_0' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Register_4_bit' (10#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:42]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_1' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:80]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_2' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:94]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_3' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:101]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_4' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:108]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_5' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:115]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_6' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:122]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_7' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'RegisterBank' (11#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:48]
+INFO: [Synth 8-3491] module 'MUX_8_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:34' bound to instance 'Mux_A_Above_Adder' of component 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:47]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_0' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:41]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:34' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'MUX_8_to_1' (12#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:41]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_1' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:75]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_2' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:90]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_3' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:105]
+INFO: [Synth 8-256] done synthesizing module 'MUX_8_way_4_bit' (13#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:47]
+INFO: [Synth 8-3491] module 'MUX_8_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:34' bound to instance 'Mux_B_Above_Adder' of component 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:238]
+INFO: [Synth 8-3491] module 'ProgramCounter' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:34' bound to instance 'Program_Counter' of component 'ProgramCounter' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:41]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D0' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'D_FF' (14#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:33]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D1' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:63]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D2' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:71]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D3' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (15#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:41]
+INFO: [Synth 8-3491] module 'RCA_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:34' bound to instance 'Adder_For_Program_Counter' of component 'RCA_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:256]
+INFO: [Synth 8-638] synthesizing module 'RCA_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:39]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:42]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA' (16#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:41]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'FA' (17#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:63]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:71]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'RCA_4' (18#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:39]
+INFO: [Synth 8-3491] module 'MUX_2_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:34' bound to instance 'Mux_For_Program_Counter' of component 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:260]
+INFO: [Synth 8-3491] module 'PROM' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:36' bound to instance 'Program' of component 'PROM' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'PROM' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'PROM' (19#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:41]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:26' bound to instance 'To_Display' of component 'LUT_16_7' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:270]
+INFO: [Synth 8-638] synthesizing module 'LUT_16_7' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (20#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:31]
+INFO: [Synth 8-3491] module 'Comparator' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:18' bound to instance 'LordsComparator' of component 'Comparator' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'Comparator' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:27]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_3' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'Comparator_Latch' (21#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:29]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_2' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:50]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_1' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'Comparator' (22#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Nanoprocessor2' (23#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:49]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1045.934 ; gain = 165.402
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1045.934 ; gain = 165.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1045.934 ; gain = 165.402
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1361.785 ; gain = 481.254
+99 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1361.785 ; gain = 481.254
+write_schematic -format pdf -orientation landscape D:/circuit.pdf
+D:/circuit.pdf
+write_schematic -format pdf -orientation portrait D:/circuitCompact.pdf
+D:/circuitCompact.pdf
+write_schematic -format pdf -orientation landscape -force D:/circuitcompact.pdf
+D:/circuitcompact.pdf
+write_schematic -format pdf -orientation landscape D:/schematic.pdf
+D:/schematic.pdf
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1368.875 ; gain = 5.191
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Nanoprocessor2' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:49]
+INFO: [Synth 8-3491] module 'Bit14_Instruction_Decoder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:34' bound to instance 'Shakthis_Instruction_Decoder' of component 'Bit14_Instruction_Decoder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'Bit14_Instruction_Decoder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:50]
+INFO: [Synth 8-3491] module 'MUX_2_way_3_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:34' bound to instance 'Internal_Mux' of component 'MUX_2_way_3_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'MUX_2_way_3_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX_2_way_3_bit' (1#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Bit14_Instruction_Decoder' (2#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:50]
+INFO: [Synth 8-3491] module 'Carry_Look_Ahead_Adder_Subtractor' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:17' bound to instance 'Lords_Adder' of component 'Carry_Look_Ahead_Adder_Subtractor' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'Carry_Look_Ahead_Adder_Subtractor' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:30]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_0' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:27]
+INFO: [Synth 8-3491] module 'Half_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:17' bound to instance 'Half_Adder_2' of component 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Half_Adder' (3#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:24]
+INFO: [Synth 8-3491] module 'Half_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:17' bound to instance 'Half_Adder_1' of component 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder' (4#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:27]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_1' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:67]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_2' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:75]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_3' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:83]
+INFO: [Synth 8-3491] module 'Carry_Look_Ahead' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:17' bound to instance 'Carry_Look_Ahead_0' of component 'Carry_Look_Ahead' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'Carry_Look_Ahead' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Carry_Look_Ahead' (5#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Carry_Look_Ahead_Adder_Subtractor' (6#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:30]
+INFO: [Synth 8-3491] module 'MUX_2_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:34' bound to instance 'Madhawas_Mux_Above_InstructionDecoder' of component 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX_2_way_4_bit' (7#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:41]
+INFO: [Synth 8-3491] module 'RegisterBank' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:34' bound to instance 'Madhawas_Register_Bank' of component 'RegisterBank' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'RegisterBank' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:48]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:34' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_0' of component 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2_to_4' (8#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_1' of component 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_to_8' (9#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_0' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Register_4_bit' (10#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:42]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_1' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:80]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_2' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:94]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_3' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:101]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_4' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:108]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_5' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:115]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_6' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:122]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_7' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'RegisterBank' (11#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:48]
+INFO: [Synth 8-3491] module 'MUX_8_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:34' bound to instance 'Madhawas_Mux_A_Above_Adder' of component 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:47]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_0' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:41]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:34' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'MUX_8_to_1' (12#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:41]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_1' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:75]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_2' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:90]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_3' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:105]
+INFO: [Synth 8-256] done synthesizing module 'MUX_8_way_4_bit' (13#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:47]
+INFO: [Synth 8-3491] module 'MUX_8_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:34' bound to instance 'Madhawas_Mux_B_Above_Adder' of component 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:238]
+INFO: [Synth 8-3491] module 'ProgramCounter' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:34' bound to instance 'Shakthis_Program_Counter' of component 'ProgramCounter' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:41]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D0' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'D_FF' (14#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:33]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D1' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:63]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D2' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:71]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D3' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (15#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:41]
+INFO: [Synth 8-3491] module 'RCA_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:34' bound to instance 'Gangadaris_Adder_For_Program_Counter' of component 'RCA_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:256]
+INFO: [Synth 8-638] synthesizing module 'RCA_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:39]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:42]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA' (16#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:41]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'FA' (17#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:63]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:71]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'RCA_4' (18#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:39]
+INFO: [Synth 8-3491] module 'MUX_2_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:34' bound to instance 'Madhawas_Mux_For_Program_Counter' of component 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:260]
+INFO: [Synth 8-3491] module 'PROM' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:36' bound to instance 'Gangadaris_ROM' of component 'PROM' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'PROM' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'PROM' (19#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:41]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:26' bound to instance 'To_Display' of component 'LUT_16_7' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:270]
+INFO: [Synth 8-638] synthesizing module 'LUT_16_7' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (20#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:31]
+INFO: [Synth 8-3491] module 'Comparator' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:18' bound to instance 'Lords_Comparator' of component 'Comparator' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'Comparator' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:27]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_3' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'Comparator_Latch' (21#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:29]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_2' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:50]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_1' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'Comparator' (22#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Nanoprocessor2' (23#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:49]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1413.535 ; gain = 49.852
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1413.535 ; gain = 49.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1413.535 ; gain = 49.852
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1426.441 ; gain = 62.758
+write_schematic -format pdf -orientation landscape -force D:/schematic.pdf
+D:/schematic.pdf
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1426.441 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Nanoprocessor2' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:49]
+INFO: [Synth 8-3491] module 'Bit14_Instruction_Decoder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:34' bound to instance 'Shakthis_Instruction_Decoder' of component 'Bit14_Instruction_Decoder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'Bit14_Instruction_Decoder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:50]
+INFO: [Synth 8-3491] module 'MUX_2_way_3_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:34' bound to instance 'Internal_Mux' of component 'MUX_2_way_3_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'MUX_2_way_3_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX_2_way_3_bit' (1#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_3_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Bit14_Instruction_Decoder' (2#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/14Bit_Instruction_Decoder.vhd:50]
+INFO: [Synth 8-3491] module 'Carry_Look_Ahead_Adder_Subtractor' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:17' bound to instance 'Lords_Adder' of component 'Carry_Look_Ahead_Adder_Subtractor' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'Carry_Look_Ahead_Adder_Subtractor' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:30]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_0' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:27]
+INFO: [Synth 8-3491] module 'Half_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:17' bound to instance 'Half_Adder_2' of component 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Half_Adder' (3#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:24]
+INFO: [Synth 8-3491] module 'Half_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Half_Adder.vhd:17' bound to instance 'Half_Adder_1' of component 'Half_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder' (4#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:27]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_1' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:67]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_2' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:75]
+INFO: [Synth 8-3491] module 'Full_Adder' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Full_Adder.vhd:17' bound to instance 'Full_Adder_3' of component 'Full_Adder' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:83]
+INFO: [Synth 8-3491] module 'Carry_Look_Ahead' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:17' bound to instance 'Carry_Look_Ahead_0' of component 'Carry_Look_Ahead' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'Carry_Look_Ahead' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Carry_Look_Ahead' (5#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Carry_Look_Ahead_Adder_Subtractor' (6#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Carry_Look_Ahead_Adder_Subtractor.vhd:30]
+INFO: [Synth 8-3491] module 'MUX_2_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:34' bound to instance 'Madhawas_Mux_Above_InstructionDecoder' of component 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX_2_way_4_bit' (7#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:41]
+INFO: [Synth 8-3491] module 'RegisterBank' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:34' bound to instance 'Madhawas_Register_Bank' of component 'RegisterBank' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'RegisterBank' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:48]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:34' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_0' of component 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2_to_4' (8#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_1' of component 'Decoder_2_to_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_to_8' (9#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_0' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Register_4_bit' (10#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:42]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_1' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:80]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_2' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:94]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_3' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:101]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_4' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:108]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_5' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:115]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_6' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:122]
+INFO: [Synth 8-3491] module 'Register_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Register_4_bit.vhd:34' bound to instance 'Register_4_bit_7' of component 'Register_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'RegisterBank' (11#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RegisterBank.vhd:48]
+INFO: [Synth 8-3491] module 'MUX_8_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:34' bound to instance 'Madhawas_Mux_A_Above_Adder' of component 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:47]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_0' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:41]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Decoder_3_to_8.vhd:34' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'MUX_8_to_1' (12#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:41]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_1' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:75]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_2' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:90]
+INFO: [Synth 8-3491] module 'MUX_8_to_1' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_to_1.vhd:34' bound to instance 'MUX_8_to_1_3' of component 'MUX_8_to_1' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:105]
+INFO: [Synth 8-256] done synthesizing module 'MUX_8_way_4_bit' (13#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:47]
+INFO: [Synth 8-3491] module 'MUX_8_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_8_way_4_bit.vhd:34' bound to instance 'Madhawas_Mux_B_Above_Adder' of component 'MUX_8_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:238]
+INFO: [Synth 8-3491] module 'ProgramCounter' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:34' bound to instance 'Shakthis_Program_Counter' of component 'ProgramCounter' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:41]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D0' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'D_FF' (14#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:33]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D1' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:63]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D2' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:71]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/D_FF.vhd:25' bound to instance 'D3' of component 'D_FF' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (15#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/ProgramCounter.vhd:41]
+INFO: [Synth 8-3491] module 'RCA_4' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:34' bound to instance 'Sansalas_Adder_For_Program_Counter' of component 'RCA_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:256]
+INFO: [Synth 8-638] synthesizing module 'RCA_4' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:39]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:42]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA' (16#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:41]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'FA' (17#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:63]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:71]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'RCA_4' (18#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd:39]
+INFO: [Synth 8-3491] module 'MUX_2_way_4_bit' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/MUX_2_way_4_bit.vhd:34' bound to instance 'Madhawas_Mux_For_Program_Counter' of component 'MUX_2_way_4_bit' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:260]
+INFO: [Synth 8-3491] module 'PROM' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:36' bound to instance 'Sansalas_ROM' of component 'PROM' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'PROM' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'PROM' (19#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/PROM.vhd:41]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:26' bound to instance 'To_Display' of component 'LUT_16_7' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:270]
+INFO: [Synth 8-638] synthesizing module 'LUT_16_7' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (20#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/LUT_16_7.vhd:31]
+INFO: [Synth 8-3491] module 'Comparator' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:18' bound to instance 'Lords_Comparator' of component 'Comparator' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'Comparator' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:27]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_3' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'Comparator_Latch' (21#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:29]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_2' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:50]
+WARNING: [Synth 8-5640] Port 'oa1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+WARNING: [Synth 8-5640] Port 'ob1' is missing in component declaration [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:28]
+INFO: [Synth 8-3491] module 'Comparator_Latch' declared at 'C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd:18' bound to instance 'Comparator_Latch_1' of component 'Comparator_Latch' [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'Comparator' (22#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Nanoprocessor2' (23#1) [C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.srcs/sources_1/new/Nanoprocessor2.vhd:49]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1428.574 ; gain = 2.133
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1428.574 ; gain = 2.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1428.574 ; gain = 2.133
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1456.223 ; gain = 29.781
+write_schematic -format pdf -orientation landscape -force D:/schematic.pdf
+D:/schematic.pdf
+write_schematic -format pdf -orientation landscape D:/schematicExt.pdf
+D:/schematicExt.pdf
