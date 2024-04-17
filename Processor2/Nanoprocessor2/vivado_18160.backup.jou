@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Apr 17 16:15:02 2024
+# Process ID: 18160
+# Current directory: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3060 C:\Users\Shakthi Weerawansa\Desktop\Nanoprocessor2\Nanoprocessor2.xpr
+# Log file: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/vivado.log
+# Journal file: C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/Nanoprocessor2.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+export_ip_user_files -of_objects  [get_files {{C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd}}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd}}
+add_files -norecurse {{C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator_Latch.vhd} {C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/Comparator.vhd}}
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_3.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_3.vhd}}
+add_files -norecurse {{C:/Users/Shakthi Weerawansa/Desktop/Nanoprocessor2/needed components/RCA_4.vhd}}
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
+launch_simulation
+source TB_Nanoprocessor2.tcl
+close_sim
