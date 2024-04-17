@@ -75,22 +75,22 @@ begin
         OB1 => OB1_1
     );
 --Assigning the inputs to the bottom latch
-IA3 <= B(3);
-IB3 <= A(3);
-An2 <= A(2);
-Bn2 <= B(2);
+IA3 <= B(3) AND EN;
+IB3 <= A(3) AND EN;
+An2 <= A(2) AND EN;
+Bn2 <= B(2) AND EN;
 
 --Assigning the inputs to the middle latch
 IA2 <= OA3;
 IB2 <= OB3;
-An1 <= A(1);
-Bn1 <= B(1);
+An1 <= A(1) AND EN;
+Bn1 <= B(1) AND EN;
 
 --Assigning the inputs to the top latch
 IA1 <= OA2;
 IB1 <= OB2;
-An0 <= A(0);
-Bn0 <= B(0);
+An0 <= A(0) AND EN;
+Bn0 <= B(0) AND EN;
 
 --Defining OA1_x and OA1_y for the special cases
 OA1_x <= OA1_3 OR OA1_2 OR OA1_1;
