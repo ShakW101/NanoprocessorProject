@@ -31,12 +31,15 @@ component Comparator_Latch
        IA : in STD_LOGIC; --input status: A
        IB : in STD_LOGIC; --input status: B
        OA : out STD_LOGIC; --output status: A
-       OB : out STD_LOGIC); --output status: B
+       OA1 : out STD_LOGIC; --AGreat Special Case
+       OB : out STD_LOGIC; --output status: B
+       OB1 : out STD_LOGIC); --BGreat Special Case
 end component;
 
 SIGNAL IA3, IA2, IA1, IB3, IB2, IB1 : std_logic; --signal input statuses of A and B
-SIGNAL OA3, OA2, OA1, OB3, OB2, OB1 : std_logic; --signal output statuses of A and B
+SIGNAL OA3, OA2, OA1, OB3, OB2, OB1, OA1_3, OA1_2, OA1_1, OB1_3, OB1_2, OB1_1 : std_logic; --signal output statuses of A and B
 SIGNAL An2, An1, An0, Bn2, Bn1, Bn0 : std_logic; --signal 2 downto 0 bits of A and B
+SIGNAL OA1_x, OB1_y :std_logic; --special outputs
 begin
     Comparator_Latch_3 : Comparator_Latch --mapping the bottom latch
     port map (
@@ -45,7 +48,9 @@ begin
         IA => IA3,
         IB => IB3,
         OA => OA3,
-        OB => OB3
+        OA1 => OA1_3,
+        OB => OB3,
+        OB1 => OB1_3
     );
     Comparator_Latch_2 : Comparator_Latch --mapping the middle latch
     port map (
@@ -54,7 +59,9 @@ begin
         IA => IA2,
         IB => IB2,
         OA => OA2,
-        OB => OB2
+        OA1 => OA1_2,
+        OB => OB2,
+        OB1 => OB1_2
     );
     Comparator_Latch_1 : Comparator_Latch --mapping the top latch
     port map (
@@ -63,7 +70,9 @@ begin
         IA => IA1,
         IB => IB1,
         OA => OA1,
-        OB => OB1
+        OA1 => OA1_1,
+        OB => OB1,
+        OB1 => OB1_1
     );
 --Assigning the inputs to the bottom latch
 IA3 <= B(3) AND EN;
@@ -83,9 +92,13 @@ IB1 <= OB2;
 An0 <= A(0) AND EN;
 Bn0 <= B(0) AND EN;
 
+--Defining OA1_x and OA1_y for the special cases
+OA1_x <= OA1_3 OR OA1_2 OR OA1_1;
+OB1_y <= OB1_3 OR OB1_2 OR OB1_1;
+
 --Defining the flags; AGreat, BGreat and Equal
-AGreat <= EN AND OA1 AND NOT(OB1);
-BGreat <= EN AND NOT(OA1) AND OB1;
-Equal <= EN AND NOT(OA1 XOR OB1);
+AGreat <= EN AND ((OA1 AND NOT(OB1)) OR OA1_x);
+BGreat <= EN AND ((NOT(OA1) AND OB1) OR OB1_y);
+Equal <= EN AND NOT(OA1 XOR OB1) AND NOT(OA1_x XOR OB1_y);
 
 end Behavioral;
