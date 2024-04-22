@@ -97,8 +97,8 @@ OA1_x <= OA1_3 OR OA1_2 OR OA1_1;
 OB1_y <= OB1_3 OR OB1_2 OR OB1_1;
 
 --Defining the flags; AGreat, BGreat and Equal
-AGreat <= EN AND ((OA1 AND NOT(OB1)) OR OA1_x);
-BGreat <= EN AND ((NOT(OA1) AND OB1) OR OB1_y);
+AGreat <= ((OA1 AND NOT(OB1)) OR OA1_x);
+BGreat <= ((NOT(OA1) AND OB1) OR OB1_y);
 Equal <= EN AND NOT(OA1 XOR OB1) AND NOT(OA1_x XOR OB1_y);
 
 end Behavioral;
