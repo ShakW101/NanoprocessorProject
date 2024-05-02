@@ -4,17 +4,12 @@ machineCode = []
 
 
 def to_4_bit_signed_binary(number):
-    # Validate the range of the input number
     if not (-8 <= number <= 7):
         raise ValueError("Number must be between -8 and 7 (inclusive).")
 
-    # Convert the number to a 4-bit two's complement binary representation
     if number >= 0:
-        # For non-negative numbers, convert to binary and pad to 4 bits
         binary_string = format(number, '04b')
     else:
-        # For negative numbers, calculate two's complement for 4-bit representation
-        # Add 16 to handle negative numbers in 4 bits
         two_complement = (number + 16) % 16
         binary_string = format(two_complement, '04b')
 
@@ -135,7 +130,44 @@ def COM(rest, no):
     else:
         print(f"line {no}: ERROR")
 
+def IFAG(rest, no):
+    if re.fullmatch(r'[r][0-7],[r][0-7],[0-9]|[r][0-7],[r][0-7],1[0-6]', rest):
+        splitS = rest.split(",")
+        firstR = int(splitS[0][-1])
+        secondR = int(splitS[1][-1])
+        address = int(splitS[2]) - 1
+        bs1 = bin(firstR)[2:].zfill(3)
+        bs2 = bin(secondR)[2:].zfill(3)
+        addressBin = bin(address)[2:].zfill(4)
+        return "1010"+bs1+bs2+addressBin
+    else:
+        print(f"line {no}: ERROR")
 
+def IFE(rest, no):
+    if re.fullmatch(r'[r][0-7],[r][0-7],[0-9]|[r][0-7],[r][0-7],1[0-6]', rest):
+        splitS = rest.split(",")
+        firstR = int(splitS[0][-1])
+        secondR = int(splitS[1][-1])
+        address = int(splitS[2]) - 1
+        bs1 = bin(firstR)[2:].zfill(3)
+        bs2 = bin(secondR)[2:].zfill(3)
+        addressBin = bin(address)[2:].zfill(4)
+        return "1011"+bs1+bs2+addressBin
+    else:
+        print(f"line {no}: ERROR")
+
+def IFNE(rest, no):
+    if re.fullmatch(r'[r][0-7],[r][0-7],[0-9]|[r][0-7],[r][0-7],1[0-6]', rest):
+        splitS = rest.split(",")
+        firstR = int(splitS[0][-1])
+        secondR = int(splitS[1][-1])
+        address = int(splitS[2]) - 1
+        bs1 = bin(firstR)[2:].zfill(3)
+        bs2 = bin(secondR)[2:].zfill(3)
+        addressBin = bin(address)[2:].zfill(4)
+        return "1100"+bs1+bs2+addressBin
+    else:
+        print(f"line {no}: ERROR")
 def is_not_single_word(string):
     # Define a regex pattern that matches any string containing whitespace
     # or punctuation characters other than a single word
@@ -187,7 +219,12 @@ def compileLine(line, no):
             return COM(rest, no)
         case "nop":
             return "10010000000000"
-            pass
+        case "ifag":
+            return IFAG(rest, no)
+        case "ife":
+            return IFE(rest, no)
+        case "ifne":
+            return IFNE(rest, no)
         case _:
             print(f"line {no}: ERROR: Keyword {function.upper()} isn't recognized.")
 
